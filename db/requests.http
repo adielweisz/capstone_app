@@ -1,0 +1,30 @@
+### Forms Index
+GET http://localhost:3000/forms.json
+
+### Forms Create
+POST http://localhost:3000/forms.json
+Content-Type: application/json
+
+{
+"question": "test question",
+"answer": "test answer",
+"width": 640,
+"height": 480
+}
+
+### Forms Show
+GET http://localhost:3000/forms/1.json
+
+### Forms Update
+PATCH http://localhost:3000/forms/1.json
+Content-Type: application/json
+
+{
+"question": "What is your face shape- circle, square, heart, diamond, rectangle or oval? ",
+"answer": "new answer",
+"width": 600,
+"height": 400
+}
+
+### Forms Destroy
+DELETE http://localhost:3000/forms/11
