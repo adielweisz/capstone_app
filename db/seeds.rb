@@ -8,3 +8,5 @@ Form.create(question:"How much time do you have for a beauty routine in the begi
 Form.create(question:"Do you prefer best within a budget products or high end?",)
 Form.create(question:"What is an eye makeup technique you would like to perfect?",)
 Form.create(question:"What is an issue with makeup you would like to resolve?")
+
+product.create(name:"Luxury Eyeshadow Palette" brand:"Charlotte Tilbury" department: "Eyeshadow"catagory:"Makeup" available_at:"Sephora, Nordstrom, Company Website" sub_catagory:"Eyes" key_word:"luxury, glam, eyeshadow palettes" description:"Each palette contains four harmonious eye colors: Prime, Enhance, Smoke, and Pop. Create a smooth base for your eye look using the Prime shade; build up definition with Enhance; add drama with the Smoke shade; and finish your dazzling look with the shimmer Pop shade. The collection can be built for a day, desk, dusk, or disco look. The step by step application is artistry made easy." tutorial_id:1 product_id:111)
