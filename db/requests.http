@@ -83,3 +83,32 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+### Key_words Index
+GET http://localhost:3000/key_words.json
+
+### Key_words Create
+POST http://localhost:3000/key_words.json
+Content-Type: application/json
+
+{
+"key_word": "luxury",
+"key_word_id": "1",
+"product_id": "2"
+}
+
+### Key_words Show
+GET http://localhost:3000/key_words/1.json
+
+### Key_words Update
+PATCH http://localhost:3000/key_words/1.json
+Content-Type: application/json
+
+{
+"key_word": "test update",
+"key_word_id": "123",
+"product_id": "2"
+}
+
+### Key_words Destroy
+DELETE http://localhost:3000/key_words/2
