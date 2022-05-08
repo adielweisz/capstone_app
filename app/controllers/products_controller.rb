@@ -13,8 +13,8 @@ class ProductsController < ApplicationController
         department: params[:department],
         catagory: params[:catagory],
         sub_catagory: params[:sub_catagory],
-        key_word: params [:key_word],
-        tutorial_id: params [:tutorial_id],        
+        key_word: params[:key_word],
+        tutorial_id: params[:tutorial_id]
       )
       product.save
       render json: product.as_json
@@ -29,9 +29,9 @@ class ProductsController < ApplicationController
       product = Product.find_by(id: params[:id])
       product.name = params[:name] || product.name
       product.brand = params[:brand] || product.brand
+      product.department = params[:department] || product.department
       product.description = params[:description] || product.description
       product.available_at = params[:available_at] || product.available_at
-      product.brand = params[:brand] || product.brand
       product.catagory = params[:catagory] || product.catagory
       product.sub_catagory = params[:sub_catagory] || product.sub_catagory
       product.key_word = params[:key_word] || product.key_word
@@ -47,4 +47,4 @@ class ProductsController < ApplicationController
       render json: {message: "Product successfully destroyed."}
     end
   end
-end
+

@@ -8,8 +8,7 @@ Content-Type: application/json
 {
 "question": "test question",
 "answer": "test answer",
-"width": 640,
-"height": 480
+"user_id": "test"
 }
 
 ### Forms Show
@@ -27,4 +26,58 @@ Content-Type: application/json
 }
 
 ### Forms Destroy
-DELETE http://localhost:3000/forms/11
+DELETE http://localhost:3000/forms/41
+
+### Products Index
+GET http://localhost:3000/products.json
+
+### Products Create
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+"name": "Test name one",
+"brand": "test brand",
+"department": "test dept",
+"description": "test description",
+"available_at":"test availableity",
+"catagory":"test catagory", 
+"sub_catagory":"test sub_catagory",
+"key_word":"test key_word",
+"tutorial_id":"1234", 
+"product_id":"123"
+}
+
+### Products Show
+GET http://localhost:3000/products/3.json
+
+### Products Update
+PATCH http://localhost:3000/products/5.json
+
+
+{
+"name": "Test update",
+"brand": "test update",
+"department": "test dept update",
+"description": "test update",
+"available_at":"test update",
+"catagory":"test update", 
+"sub_catagory":"test update",
+"key_word":"test update",
+"tutorial_id": 12345, 
+"product_id": 1234,
+}
+
+### Products Destroy
+DELETE http://localhost:3000/products/4.json
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Harry",
+  "email": "styles@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
