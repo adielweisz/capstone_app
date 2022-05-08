@@ -38,6 +38,7 @@ Content-Type: application/json
 {
 "name": "Test name one",
 "brand": "test brand",
+"image_url": "https://images.squarespace-cdn.com/content/v1/57f779fc8419c2af7bf7e85d/1589283676889-60OO82JZCT4FE3QS32AI/IMG_6045.png?format=1000w",
 "department": "test dept",
 "description": "test description",
 "available_at":"test availableity",
@@ -58,6 +59,7 @@ PATCH http://localhost:3000/products/5.json
 {
 "name": "Test update",
 "brand": "test update",
+"image_url": "test",
 "department": "test dept update",
 "description": "test update",
 "available_at":"test update",

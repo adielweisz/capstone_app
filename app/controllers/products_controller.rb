@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
         name: params[:name],
         brand: params[:brand],
         description: params[:description],
+        image_url: params[:image_url],
         available_at: params[:available_at],
         department: params[:department],
         catagory: params[:catagory],
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
       product = Product.find_by(id: params[:id])
       product.name = params[:name] || product.name
       product.brand = params[:brand] || product.brand
+      product.image_url =params[:image_url] || product.image_url
       product.department = params[:department] || product.department
       product.description = params[:description] || product.description
       product.available_at = params[:available_at] || product.available_at
