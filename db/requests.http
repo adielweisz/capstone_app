@@ -92,8 +92,7 @@ POST http://localhost:3000/key_words.json
 Content-Type: application/json
 
 {
-"key_word": "luxury",
-"key_word_id": "1",
+"key_word": "eyeshadow",
 "product_id": "2"
 }
 

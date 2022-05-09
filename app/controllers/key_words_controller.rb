@@ -6,7 +6,6 @@ class KeyWordsController < ApplicationController
   def create
     key_word = KeyWord.new(
       key_word: params[:key_word],
-      key_word_id: params[:key_word_id],
       product_id: params[:product_id]
     )
     key_word.save
@@ -14,12 +13,12 @@ class KeyWordsController < ApplicationController
   end
 
   def show
-    key_word = Key_word.find_by(id: params[:id])
+    key_word = KeyWord.find_by(id: params[:id])
     render json: key_word.as_json
   end
 
   def update
-    key_word = Key_word.find_by(id: params[:id])
+    key_word = KeyWord.find_by(id: params[:id])
     key_word.key_word_id = params[:key_word_id] || key_word.key_word_id
     key_word.key_word = params[:key_word] || key_word.key_word
     key_word.product_id =params[:product_id] || key_word.product_id   
@@ -28,7 +27,7 @@ class KeyWordsController < ApplicationController
   end
 
   def destroy
-    key_word = Key_word.find_by(id: params[:id])
+    key_word = KeyWord.find_by(id: params[:id])
     key_word.destroy
     render json: {message: "key_word successfully destroyed."}
   end

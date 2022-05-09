@@ -6,5 +6,6 @@ class Product < ApplicationRecord
   has_many :images
   has_many :catagories
   has_many :key_words
-  belongs_to :forms
+  belongs_to :form
+  belongs_to :key_word
 end
