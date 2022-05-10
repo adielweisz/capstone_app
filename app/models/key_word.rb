@@ -1,5 +1,5 @@
 class KeyWord < ApplicationRecord
 
-  #has_many :products
-  #belongs_to :form
+  belongs_to :product
+  belongs_to :answer
 end

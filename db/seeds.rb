@@ -28,3 +28,4 @@ Question.create(question:"What is an issue with makeup you would like to resolve
   Form.create(name:"New User")
   Form.create(name:"Appointments")
 
+Answer.create()

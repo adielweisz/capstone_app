@@ -3,9 +3,8 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
 
-  # has_many :images
-  # has_many :catagories
-  # has_many :key_words
-  # belongs_to :form
-  # belongs_to :key_word
+
+   has_many :questions
+   has_many :key_words
+  
 end
