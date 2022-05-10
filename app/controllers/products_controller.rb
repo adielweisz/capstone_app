@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
     end
   
     def create
+      pp params
       product = Product.new(
         name: params[:name],
         brand: params[:brand],
@@ -14,8 +15,9 @@ class ProductsController < ApplicationController
         department: params[:department],
         catagory: params[:catagory],
         sub_catagory: params[:sub_catagory],
-        key_word: params[:key_word],
-        tutorial_id: params[:tutorial_id]
+        tutorial_id: params[:tutorial_id],
+        form_id: params[:form_id],
+        media: params[:media]
       )
       product.save
       render json: product.as_json

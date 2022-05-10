@@ -6,9 +6,7 @@ POST http://localhost:3000/forms.json
 Content-Type: application/json
 
 {
-"question": "test question",
-"answer": "test answer",
-"user_id": "test"
+"name": "Appointments"
 }
 
 ### Forms Show
@@ -19,14 +17,11 @@ PATCH http://localhost:3000/forms/1.json
 Content-Type: application/json
 
 {
-"question": "What is your face shape- circle, square, heart, diamond, rectangle or oval? ",
-"answer": "new answer",
-"width": 600,
-"height": 400
+"name":"test"
 }
 
 ### Forms Destroy
-DELETE http://localhost:3000/forms/41
+DELETE http://localhost:3000/forms/44
 
 ### Products Index
 GET http://localhost:3000/products.json
@@ -36,17 +31,17 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "Test name one",
-"brand": "test brand",
-"image_url": "https://images.squarespace-cdn.com/content/v1/57f779fc8419c2af7bf7e85d/1589283676889-60OO82JZCT4FE3QS32AI/IMG_6045.png?format=1000w",
-"department": "test dept",
-"description": "test description",
-"available_at":"test availableity",
-"catagory":"test catagory", 
-"sub_catagory":"test sub_catagory",
-"key_word":"test key_word",
-"tutorial_id":"1234", 
-"product_id":"123"
+"name": "Major Sculpt - Creme Contour & Powder Bronzer Duo",
+"brand": "Patrick Ta",
+"image_url": "https://cdn.shopify.com/s/files/1/0099/0602/8608/products/Medium-She_sSculpted-Allure_86d358a3-6ee4-49d3-9dde-90d31e805a8d_large.png?v=1633496390",
+"department": "Bronzer",
+"description": "bronzer for bronzing",
+"available_at":"Sephora, Patrick Ta, Amazon",
+"catagory":"Makeup", 
+"sub_catagory":"Face",
+"tutorial_id":2,
+"form_id": 1,
+"media":""
 }
 
 ### Products Show

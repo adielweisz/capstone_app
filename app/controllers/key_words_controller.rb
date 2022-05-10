@@ -19,7 +19,6 @@ class KeyWordsController < ApplicationController
 
   def update
     key_word = KeyWord.find_by(id: params[:id])
-    key_word.key_word_id = params[:key_word_id] || key_word.key_word_id
     key_word.key_word = params[:key_word] || key_word.key_word
     key_word.product_id =params[:product_id] || key_word.product_id   
     product.save

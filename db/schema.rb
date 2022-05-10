@@ -10,16 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_08_201950) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_10_161831) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "forms", force: :cascade do |t|
-    t.string "question"
+  create_table "answers", force: :cascade do |t|
+    t.integer "question_id"
+    t.integer "user_id"
     t.string "answer"
+    t.integer "key_word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+  end
+
+  create_table "forms", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "key_words", force: :cascade do |t|
@@ -41,6 +48,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_08_201950) do
     t.datetime "updated_at", null: false
     t.string "brand"
     t.string "image_url"
+    t.integer "form_id"
+    t.string "media"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "question"
+    t.integer "form_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

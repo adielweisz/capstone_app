@@ -6,9 +6,7 @@ class FormsController < ApplicationController
   
     def create
       form = Form.new(
-        question: params[:question],
-        answer: params[:answer],
-        user_id: params[:user_id]
+        name: params[:name]
       )
       form.save
       render json: form.as_json
@@ -21,9 +19,7 @@ class FormsController < ApplicationController
   
     def update
       form = Form.find_by(id: params[:id])
-      form.question = params[:question] || form.question
-      form.answer = params[:answer] || form.answer    
-      form.user_id = params[:user_id] || form.user_id
+      form.name = params[:name] || form.name
       form.save
       render json: form.as_json
     end
