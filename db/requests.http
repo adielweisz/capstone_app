@@ -31,15 +31,14 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "Major Sculpt - Creme Contour & Powder Bronzer Duo",
-"brand": "Patrick Ta",
-"image_url": "https://cdn.shopify.com/s/files/1/0099/0602/8608/products/Medium-She_sSculpted-Allure_86d358a3-6ee4-49d3-9dde-90d31e805a8d_large.png?v=1633496390",
-"department": "Bronzer",
-"description": "bronzer for bronzing",
-"available_at":"Sephora, Patrick Ta, Amazon",
+"name": "Pastle Denona Eyeshadow Palette",
+"brand": "Natasha Denona",
+"image_url": "https://www.sephora.com/productimages/sku/s2512556-av-01-zoom.jpg?imwidth=612",
+"department": "Face",
+"description": "A palette bursting with lush, inspiring colors from playful pinks and yellows to delicate purples and blues.",
+"available_at":"Sephora",
 "catagory":"Makeup", 
 "sub_catagory":"Face",
-"tutorial_id":2,
 "form_id": 1,
 "media":""
 }
@@ -82,27 +81,56 @@ Content-Type: application/json
 ### Key_words Index
 GET http://localhost:3000/key_words.json
 
-### Key_words Create
+### Key_Words Create
 POST http://localhost:3000/key_words.json
 Content-Type: application/json
 
 {
-"key_word": "eyeshadow",
-"product_id": "2"
+"key_word": "Bored",
+"product_id": 25,
+"answer_id": 10
 }
 
 ### Key_words Show
-GET http://localhost:3000/key_words/1.json
+GET http://localhost:3000/key_words/16.json
 
 ### Key_words Update
 PATCH http://localhost:3000/key_words/1.json
 Content-Type: application/json
 
 {
-"key_word": "test update",
-"key_word_id": "123",
-"product_id": "2"
+"key_word": "Round",
+"product_id": "8"
 }
 
 ### Key_words Destroy
-DELETE http://localhost:3000/key_words/2
+DELETE http://localhost:3000/key_words/
+
+###Answers Create
+POST http://localhost:3000/answers.json
+Content-Type: application/json
+
+{
+"answer":"I want to learn how to contour my face",
+"question_id":10
+}
+
+### Answers Index
+GET http://localhost:3000/answers
+
+### Answers Show
+GET http://localhost:3000/answers/14.json
+
+
+###Users_Answers
+POST http://localhost:3000/users_answers.json
+Content-Type: application/json
+
+{
+"answer_id":3,
+"question_id":1,
+"user_id": 1
+}
+
+### Users_Answers Index
+GET http://localhost:3000/users_answers
