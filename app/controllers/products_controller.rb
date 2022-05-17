@@ -38,7 +38,6 @@ class ProductsController < ApplicationController
       product.available_at = params[:available_at] || product.available_at
       product.catagory = params[:catagory] || product.catagory
       product.sub_catagory = params[:sub_catagory] || product.sub_catagory
-      product.key_word = params[:key_word] || product.key_word
       product.tutorial_id = params[:tutorial_id] || product.tutorial_id
       product.product_id = params[:product_id] || product.product_id
       product.save

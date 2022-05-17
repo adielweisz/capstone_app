@@ -31,12 +31,12 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "Pastle Denona Eyeshadow Palette",
-"brand": "Natasha Denona",
-"image_url": "https://www.sephora.com/productimages/sku/s2512556-av-01-zoom.jpg?imwidth=612",
+"name": "Understanding Your Face Shape",
+"brand": "",
+"image_url": "https://i.shgcdn.com/8dabb5e2-7414-4c17-b313-202a1dfb3694/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
 "department": "Face",
-"description": "A palette bursting with lush, inspiring colors from playful pinks and yellows to delicate purples and blues.",
-"available_at":"Sephora",
+"description": "Knowing your face shape can help you correctly place the lightening  and shading aspects of your makeup.",
+"available_at":"",
 "catagory":"Makeup", 
 "sub_catagory":"Face",
 "form_id": 1,
@@ -47,25 +47,23 @@ Content-Type: application/json
 GET http://localhost:3000/products/3.json
 
 ### Products Update
-PATCH http://localhost:3000/products/5.json
+PATCH http://localhost:3000/products/2.json
 
 
 {
-"name": "Test update",
-"brand": "test update",
-"image_url": "test",
-"department": "test dept update",
-"description": "test update",
-"available_at":"test update",
-"catagory":"test update", 
-"sub_catagory":"test update",
-"key_word":"test update",
-"tutorial_id": 12345, 
-"product_id": 1234,
+"name": "Luxury Eyeshadow Palette",
+"brand": "Charlotte Tilbury",
+"image_url": "https://images.ctfassets.net/wlke2cbybljx/AsVqDlt8VJEgNYQgGKFcx/bcb4fce0b105d4ea9c3d82f4c407aa88/luxury-palette-pillow-talk-packshot.png?w=500&h=500&fit=fill&fm=jpg&bg=",
+"department": "Eyeshadow",
+"description": "Each palette contains four harmonious eye colors: Prime, Enhance, Smoke, and Pop. Create a smooth base for your eye look using the Prime shade; build up definition with Enhance; add drama with the Smoke shade; and finish your dazzling look with the shimmer Pop shade. The collection can be built for a day, desk, dusk, or disco look. The step by step application is artistry made easy.",
+"available_at":"Sephora, Nordstrom, Charlotte Tilbury",
+"catagory":"Makeup", 
+"sub_catagory":"Eyes", 
+"product_id": 2
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/4.json
+DELETE http://localhost:3000/products/7.json
 
 ### Users create (signup)
 POST http://localhost:3000/users
