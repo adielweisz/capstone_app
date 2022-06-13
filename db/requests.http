@@ -132,3 +132,6 @@ Content-Type: application/json
 
 ### Users_Answers Index
 GET http://localhost:3000/users_answers
+
+### Makeup_API Index
+GET http://makeup-api.herokuapp.com/api/v1/products.json

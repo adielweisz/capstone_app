@@ -52,4 +52,7 @@ Rails.application.routes.draw do
     patch "/questions/:id" => "questions#update"
     delete "/questions/:id" => "questions#destroy"
   end
+ 
+  #Makeup_API
+  get "/makeup" => "makeup#index"
 end
